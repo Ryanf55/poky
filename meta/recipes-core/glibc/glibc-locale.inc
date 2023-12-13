@@ -64,8 +64,6 @@ FILES:localedef = "${bindir}/localedef"
 
 LOCALETREESRC = "${COMPONENTS_DIR}/${PACKAGE_ARCH}/glibc-stash-locale"
 
-PSEUDO_INCLUDE_PATHS .= ",${WORKDIR}/locale-tree"
-
 copy_locale_files() {
 	local dir=$1 mode=$2
 
