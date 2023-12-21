@@ -63,7 +63,7 @@ def sstate_rundepfilter(siggen, fn, recipename, task, dep, depname, dataCaches):
         return False
 
     # Exclude well defined machine specific configurations which don't change ABI
-    if depname in siggen.abisaferecipes and not isImage(mc, fn) and deptaskname != "do_create_spdx":
+    if depname in siggen.abisaferecipes and not isImage(mc, fn):
         return False
 
     # Kernel modules are well namespaced. We don't want to depend on the kernel's checksum
